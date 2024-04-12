@@ -1,0 +1,77 @@
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .lodging-and-popular {
+        flex-direction: column;
+    }
+
+    .lodging {
+        width: 100%;
+    }
+
+    .popular {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .popular-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .popular-cards a {
+        width: 30%;
+    }
+
+    .popular-cards .card-title {
+        font-size: 14px;
+    }
+
+    .popular-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+
+
+    /*********** SEARCH-BAR ***********/
+    .filters-bar {
+        display: block;
+    }
+    .filters-bar h2 {
+        margin-bottom: 20px;
+    }
+
+
+
+    /*********** ACTIVITY-CARD ***********/
+    .activity-card {
+        width: 193.5px;
+        height: 270px;
+    }
+    .activity-card img {
+        height: 200px;
+    }
+
+
+    /*********** FOOTER ***********/
+    footer {
+        width: 924px;
+    }
+    .footer-section {
+        width: 288px;
+    }
+}
+
+
+
+
+
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+}
