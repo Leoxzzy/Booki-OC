@@ -35,12 +35,14 @@
                     <p>En plein centre-ville ou en pleine nature</p>
                 </div>
 
-                <div class="search-bar">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="search" value="Marseille, France" id="search-bar-input" name="research">
-                    <button class="largeButton">Rechercher</button>
-                    <button class="smallButton"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+                <form accept-charset="UTF-8" name="search-bar-form" method="post">
+                    <div class="search-bar">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="search" value="Marseille, France" id="search-bar-input" name="research">
+                        <button class="largeButton">Rechercher</button>
+                        <button class="smallButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
 
                 <div class="filters-bar">
                     <h2>Filtres</h2>
@@ -71,7 +73,7 @@
             </div>
 
             <div class="lodging-and-popular">
-                <section class="lodging" id="lodging-section">
+                <section id="lodging">
                     <h2 class="section-title">Hébergements à Marseille</h2>
                     <div class="lodging-cards">
                         <a href="#">
@@ -198,7 +200,7 @@
                     <a href="#" class="lodging-and-popular-show-more">Afficher plus</a>
                 </section>
 
-                <section class="popular">
+                <section id="popular">
                     <div class="popular-title">
                         <h2 class="section-title">Les plus populaires</h2>
                         <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
@@ -268,7 +270,7 @@
                 </section>
             </div>
 
-            <section class="activities" id="activities-section">
+            <section id="activities">
                 <h2 class="section-title">Activités à Marseille</h2>
                 <div class="activities-cards">
                     <a href="#">
@@ -306,29 +308,28 @@
             <div class="footer-section">
                 <h3>À propos</h3>
                 <ul>
-                    <a href="#">Fonctionnement du site</a>
-                    <a href="#">Conditions générales </a>
-                    <a href="#">Données et confidentialité</a>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales </a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h3>Nos hébergements</h3>
                 <ul>
-                    <a href="#">Charte qualité</a>
-                    <a href="#">Proposer votre hôtel</a>
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Proposer votre hôtel</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h3>Assistance</h3>
                 <ul>
-                    <a href="#">Centre d’aide</a>
-                    <a href="#">Nous contacter</a>
+                    <li><a href="#">Centre d’aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
                 </ul>
             </div>
         </footer>
     </div>
 </body>
-
 </html>
