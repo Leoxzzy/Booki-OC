@@ -112,7 +112,7 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
     width: 377px;
     height: 49px;
     
-    border: 1px solid rgba(242, 242, 242, 1);
+    border: 1px solid var(--main-bg-color);
     border-radius: 15px;
     overflow: hidden;
 }
@@ -128,9 +128,9 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
     color: black;
     font-size: 20px;
     
-    background-color: rgba(242, 242, 242, 1);
+    background-color: var(--main-bg-color);
 
-    border: 1px solid rgba(242, 242, 242, 1);
+    border: 1px solid var(--main-bg-color);
 }
 .search-bar input {
     height: 100%;
@@ -149,8 +149,8 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
     width: 132px;
     height: 100%;
     
-    background-color: rgba(0, 101, 252, 1);
-    border: 1px solid rgba(0, 101, 252, 1);
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
     
     color: white;
     font-size: 18px;
@@ -183,13 +183,13 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
 .filter i {
     font-size: 22px;
 }
-.filter h3 {
+.filter p {
     font-weight: 700;
     font-size: 17px;
     line-height: 19.96px;
 }
 .filter:hover {
-    background-color: rgba(222, 235, 255, 1);
+    background-color: var(--filter-bg-color);
     transition: 170ms ease-in;
 }
 
@@ -262,27 +262,31 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
 
 /*********** LODGING-CARD ***********/
 .lodging-cards a {
-    width: 29.5%;
+    width: 31%;
     max-width: 250.33px;
  }
 .lodging-card {
     background-color: white;
     width: 100%;
-    height: 207.25px;
-
     max-width: 250.33px; /* Largeur maximale des éléments */
-
-    padding: 5px 5px 15px 5px;
+    height: auto;
+    min-height: 207.25px;
     border-radius: 20px;
+    
+    display: flex;
+    flex-direction: column;
+
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .lodging-card:hover {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.13);
     transition: 170ms ease-in;
 }
 .lodging-card img {
-    width: 100%;
+    width: 97%;
     height: 120px;
-
+    margin-top: 4px;
+    align-self: center;
     margin-bottom: 8px;
     border-radius: 20px 20px 0px 0px;
     
@@ -290,6 +294,7 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
 }
 .lodging-card-content {
     margin-left: 15px;
+    margin-bottom: 9px;
 }
 .lodging-card-txt {
     margin-bottom: 8px;
@@ -344,7 +349,7 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
     padding: 20px;
     gap: 15px;
 }
-.footer-section h3 {
+.footer-section h2 {
     font-weight: 700;
     font-size: 18px;
     line-height: 21.13px;
@@ -463,14 +468,19 @@ header nav {
     width: 100%;
     height: auto;
 
-
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+.lodging-cards-line {
+    width: 100%;
+    height: auto;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px
-}
+    gap: 30px;
 
+}
 
 /*********** ACTIVITIES ***********/
 #activities {
@@ -494,7 +504,7 @@ footer {
     
     margin-top: 35px;
     
-    background-color: rgba(242, 242, 242, 1);
+    background-color: var(--main-bg-color);
     width: 100%;
     height: 163px;
 }
@@ -507,6 +517,9 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
 ***************************************************************************************************/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    /***************************************************************************************************
+    COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS
+    ***************************************************************************************************/
     .lodging-and-popular {
         flex-direction: column;
     }
@@ -522,6 +535,12 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
         flex-direction: row;
         justify-content: space-between;
     }
+
+
+
+    /***************************************************************************************************
+    PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE - PAGE
+    ***************************************************************************************************/
     .popular-cards a {
         width: 30%;
     }
@@ -531,7 +550,6 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
     .popular-cards .card-subtitle {
         font-size: 13px;
     }
-
     /*********** SEARCH-BAR ***********/
     .filters-bar {
         display: block;
@@ -539,25 +557,31 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
     .filters-bar h2 {
         margin-bottom: 20px;
     }
-
     /*********** ACTIVITY-CARD ***********/
     .activity-card {
-        height: 270px;
+        height: 280px;
     }
     .activity-card img {
         height: 200px;
     }
-
     /*********** FOOTER ***********/
     .footer-section {
         width: 288px;
+    }
+    /*********** LODGING-CARDS ***********/
+    .lodging-cards a {
+        width: 33%;
+        max-width: none;
+    }
+    .lodging-card {
+        max-width: none; /* Largeur maximale des éléments */
     }
 }
 
 
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     /*********** GENERAL ***********/
     .main-container {
         padding: 0;
@@ -635,9 +659,9 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
         /* padding-left: 19px; */
     }
     .filter i {
-        font-size: 20px;
+        font-size: 19px;
     }
-    .filter h3 {
+    .filter p {
         font-weight: 700;
         font-size: 14px;
         line-height: 16.44px;
@@ -760,6 +784,10 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
     .popular-cards a {
         width: 100%;
     }
+    .popular-card {
+        box-sizing: border-box;
+        width: 100%;
+    }
 
     /*********** LODGING ***********/
     #lodging {
@@ -773,6 +801,9 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
     .lodging-cards a {
        width: 100%;
        max-width: none;
+    }
+    .lodging-cards-line {
+        flex-direction: column;
     }
 
     /*********** ACTIVITIES ***********/
