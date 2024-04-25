@@ -594,7 +594,6 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
     ***************************************************************************************************/
     /*********** NAV-LOGO ***********/
     .nav-logo {
-        /* align-self: center; */ /* Attention */
         margin-top: 30px;
         margin-bottom: 30px;
     }
@@ -630,7 +629,6 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
     }
 
     /*********** SEARCH-BAR ***********/
-    /* ??????????????????????????????????? */
     .search-bar {
         width: 100%;
         height: 49px;
@@ -654,9 +652,8 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
     /*********** FILTER ***********/
     .filter {
         gap: 10px;
-        width: 46%; /* Attention */
+        width: 46%;
         padding: 0;
-        /* padding-left: 19px; */
     }
     .filter i {
         font-size: 19px;
@@ -666,10 +663,6 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
         font-size: 14px;
         line-height: 16.44px;
     }
-
-
-    /*********** INFO-BAR ***********/
-    /* Rien */
 
     /*********** POPULAR-CARD ***********/
     .popular-card {
@@ -706,7 +699,7 @@ MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIAQUERIES - MEDIA
 
     /*********** FOOTER ***********/
     .footer-section {
-        width: 263.67px; /* Attention */
+        width: 263.67px;
         margin-top: 30px;
         margin-bottom: 30px;
         margin-left: 30px;
