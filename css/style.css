@@ -145,6 +145,10 @@ COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - COMPONENTS - CO
     border: none;
     outline: none;
 }
+.search-bar input::placeholder {
+    color: black;
+}
+
 .search-bar button {
     width: 132px;
     height: 100%;
